@@ -1,0 +1,24 @@
+.loading-bg{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loading-gif{
+    border-radius: 2vh;
+    overflow: hidden;
+    z-index: 150;
+}
+.loading-gif img{
+    width: 12vw;
+    height: 10vw;
+    z-index: 200;
+    opacity: 0.75;
+}

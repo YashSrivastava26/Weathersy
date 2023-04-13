@@ -1,0 +1,116 @@
+#picArea{
+    border-top-left-radius: 5vh;
+    position: relative;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.imgTextArea{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.img{
+    position : relative;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+}
+.img img{
+    width: 100%;
+    height: 130%;
+}
+.searchCont{
+    height: 100%;
+    width: 100%;
+    position: relative;    
+    align-items: center;
+    display: flex;
+}
+#locationSearch{
+    height: 10%;
+    width: 90%;
+    /* margin: 0 auto; */
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    padding: 5px 10px;
+    width: 100%;
+    background: rgb(255 255 255/15%);
+    border-radius: 0.5vw;
+    outline: none;
+    border: 0;
+    box-shadow: -1px -1px 3px rgb(0 0 0/30%), 1px 1px 3px rgb(255 255 255/40%);
+}
+
+.searchCont Input::placeholder{
+    color: black;
+}
+
+.leftContainer-main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+}
+
+.textArea{
+    height: 25%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherCondition{
+    font-size: xx-large;
+    text-align: left;
+    font-weight: 300;
+}
+
+.littleSummary{
+    height: 40%;
+}
+.cont{
+    position: relative;
+    height: 25%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    margin: 3% auto;
+}
+.summaryImg{
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+}
+.message{
+    display: inline-block;
+}
+
+hr{
+    width: 80%;
+    margin: 0 10%;
+}
+
+*{
+    color: black;
+}
+
+.searchIcon{
+    position: absolute;
+    right: 1%;
+    cursor: pointer;
+}

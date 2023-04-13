@@ -1,0 +1,39 @@
+.foreCast-Card{
+    /* border: 1px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.choice{
+    padding: 1% 3%;
+    padding-top: 2.5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.locationDisplay{
+    position: absolute;
+    right: 5%;
+}
+.historyContainer{
+    /* border: 1px solid red; */
+    height: 70%;
+}
+
+.historycard{
+    height: 90%;
+    width: 15% !important;
+}
+.forecastcard{
+    height: 100%;
+    width: 25% !important;
+}
+#past{
+    color: black;
+    box-shadow: -6px -2px 10px rgb(0 0 0/25%), 2px 3px 12px rgb(255 255 255/40%);
+} 
+#future{
+    color: black;
+    box-shadow: -6px -2px 10px rgb(0 0 0/25%), 2px 3px 12px rgb(255 255 255/40%);
+}
