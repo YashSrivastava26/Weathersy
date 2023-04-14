@@ -10,7 +10,7 @@ import currentDataContext from '../Context/TodaysData/currentDataContext'
 const LeftCard = (props) => {
     const context  = useContext(currentDataContext);
     const {weatherData} = context;
-    const { loading, callAPI } = props;
+    const { loading, callAPI , setErrorMsg } = props;
     const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const [currTime, setCurrTime] = useState(new Date().toTimeString().slice(0, 8));
@@ -30,8 +30,14 @@ const LeftCard = (props) => {
     }
 
     const handleSearch = () => {
-        callAPI(search.value);
-        search.value = '';
+        if(search.value.length === 0){
+            console.log('object');
+            setErrorMsg("Search Can't be empty");
+        }
+        else{
+            callAPI(search.value);
+            search.value = '';
+        }
     }
 
     return (

@@ -6,7 +6,7 @@ const PastDataState = (props) => {
     const [pastData, setPastData] = useState(null);
 
     const updatePastData= (newData) =>{
-        setPastData({weather:newData.weather, astro : newData.astro});
+        setPastData(newData.forecast.forecastday);
     }
     return (
         <PastDataContext.Provider value={{pastData, updatePastData}}>

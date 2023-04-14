@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2438549a.css",
+    "main.js": "/static/js/main.e895fd58.js",
+    "static/media/loading.gif": "/static/media/loading.13e2ea88e02659036971.gif",
+    "static/media/cloudy_bg.jpg": "/static/media/cloudy_bg.5e1ce617048924b8c988.jpg",
+    "static/media/rain_bg.jpg": "/static/media/rain_bg.e113bbd39eb80a382609.jpg",
+    "static/media/clear_night_bg.jpg": "/static/media/clear_night_bg.e613476018a372cfb2f3.jpg",
+    "static/media/aqi-1.png": "/static/media/aqi-1.a2a61dc9fd3dd80dcd51.png",
+    "static/media/aqi-3.png": "/static/media/aqi-3.3e7eaf4fd6aebf5238b3.png",
+    "static/media/aqi-5.png": "/static/media/aqi-5.1111201ff532cf6d9087.png",
+    "static/media/aqi-2.png": "/static/media/aqi-2.f80dbceb2a22e16a470a.png",
+    "static/media/aqi-4.png": "/static/media/aqi-4.edbcb9a3d2c6cfe8701b.png",
+    "static/media/aqi-6.png": "/static/media/aqi-6.c2fdd36e4f2498d3d933.png",
+    "static/media/hailstorm.png": "/static/media/hailstorm.4cc44915883a7a4f50d5.png",
+    "static/media/hailstorm_bg.jpg": "/static/media/hailstorm_bg.760656b19bfd13622713.jpg",
+    "static/media/day_clear.png": "/static/media/day_clear.466d15e5feeb9d2c86d3.png",
+    "static/media/day_snow_thunder.png": "/static/media/day_snow_thunder.1eb478b937a67b0b1e16.png",
+    "static/media/night_half_moon_snow_thunder.png": "/static/media/night_half_moon_snow_thunder.c6bd497a9d54bb391afa.png",
+    "static/media/day_snow.png": "/static/media/day_snow.c62e99e800492b4b5f99.png",
+    "static/media/day_sleet.png": "/static/media/day_sleet.c579fd0d1462c690aa50.png",
+    "static/media/day_rain_thunder.png": "/static/media/day_rain_thunder.1b3549549dfb790b5cb7.png",
+    "static/media/day_rain.png": "/static/media/day_rain.ac447bac393c79a05c8b.png",
+    "static/media/night_half_moon_snow.png": "/static/media/night_half_moon_snow.75e965367c02caeeb40b.png",
+    "static/media/night_half_moon_sleet.png": "/static/media/night_half_moon_sleet.48c852a51f1c4f671e0d.png",
+    "static/media/night_half_moon_rain_thunder.png": "/static/media/night_half_moon_rain_thunder.83ddbefcaf2b6f119c52.png",
+    "index.html": "/index.html",
+    "main.2438549a.css.map": "/static/css/main.2438549a.css.map",
+    "main.e895fd58.js.map": "/static/js/main.e895fd58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2438549a.css",
+    "static/js/main.e895fd58.js"
+  ]
+}

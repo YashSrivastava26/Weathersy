@@ -12,11 +12,10 @@ const ForcastArea = () => {
   const pastContext = useContext(pastDataContext);
   const currentContext = useContext(currentDataContext);
 
-  const { pastData, updatePastData } = pastContext;
+  const { pastData } = pastContext;
   const { weatherData } = currentContext;
 
   const handleOnchange = (event, newChoice) => {
-    // if()
     setCoice(newChoice);
   };
 
@@ -44,12 +43,11 @@ const ForcastArea = () => {
 
       {choice == 'past' && 
       <div className="historyContainer row d-flex my-3">
-        {/* console.log(object) */}
-        <div className="historycard col col-6"><PastCardOrForecast isPast={true}/></div>
-        <div className="historycard col col-6"><PastCardOrForecast isPast={true}/></div>
-        <div className="historycard col col-6"><PastCardOrForecast isPast={true}/></div>
-        <div className="historycard col col-6"><PastCardOrForecast isPast={true}/></div>
-        <div className="historycard col col-6"><PastCardOrForecast isPast={true}/></div>
+        <div className="historycard col col-6"><PastCardOrForecast isPast={true} data={pastData[0]}/></div>
+        <div className="historycard col col-6"><PastCardOrForecast isPast={true} data={pastData[1]}/></div>
+        <div className="historycard col col-6"><PastCardOrForecast isPast={true} data={pastData[2]}/></div>
+        <div className="historycard col col-6"><PastCardOrForecast isPast={true} data={pastData[3]}/></div>
+        <div className="historycard col col-6"><PastCardOrForecast isPast={true} data={pastData[4]}/></div>
         </div>
         }
       {choice == 'future' && 

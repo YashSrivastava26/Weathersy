@@ -6,7 +6,6 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ForcastArea from './ForcastArea'
 import currentDataContext from '../Context/TodaysData/currentDataContext'
-import PastDataState from '../Context/PastData/PastDataState'
 import { getAQIImg } from './getImg'
 
 
@@ -21,9 +20,7 @@ const RightCard = (props) => {
     <>
       {!(props.loading) && <div className='rightcontainer'>
         <div className="data">
-          <PastDataState>
             <ForcastArea />
-          </PastDataState>
         </div>
         <div className="todaysSummary">
           <p className='highlight-title'>Today's Highlights</p>

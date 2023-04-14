@@ -156,7 +156,120 @@ const getAQIImg = (aqi) => {
 
 }
 
+const getBg=(code, is_day)=>{
+    const day = {
 
-export {getImg, getAQIImg}
+      1000: 'sunny_bg',
+      1003: 'sunny_bg',
+      1006: 'cloudy_bg',
+      1009: 'cloudy_bg',
+      1030: 'mist_bg',
+      1063: 'rain_bg',
+      1066: 'snow_bg',
+      1069: 'mist_bg',
+      1072: 'mist_bg',
+      1087: 'cloudy_bg',
+      1114: 'snow_bg',
+      1117: 'snow_bg',
+      1135: 'mist_bg',
+      1147: 'mist_bg',
+      1150: 'rain_bg',
+      1153: 'rain_bg',
+      1168: 'mist_bg',
+      1171: 'mist_bg',
+      1180: 'rain_bg',
+      1183: 'rain_bg',
+      1186: 'rain_bg',
+      1189: 'rain_bg',
+      1192: 'rain_bg',
+      1195: 'rain_bg',
+      1198: 'mist_bg',
+      1201: 'mist_bg',
+      1204: 'mist_bg',
+      1207: 'mist_bg',
+      1210: 'snow_bg',
+      1213: 'snow_bg',
+      1216: 'snow_bg',
+      1219: 'snow_bg',
+      1222: 'snow_bg',
+      1225: 'snow_bg',
+      1237: 'hailstorm_bg',
+      1240: 'rain_bg',
+      1243: 'rain_bg',
+      1246: 'rain_bg',
+      1249: 'mist_bg',
+      1252: 'mist_bg',
+      1255: 'snow_bg',
+      1258: 'snow_bg',
+      1261: 'hailstorm_bg',
+      1264: 'hailstorm_bg',
+      1273: 'rain_bg',
+      1276: 'rain_bg',
+      1279: 'snow_bg',
+      1282: 'snow_bg',
+
+  }
+  const night = {
+
+    1000: 'clear_night_bg',
+    1003: 'clear_night_bg',
+    1006: 'cloudy_bg',
+    1009: 'cloudy_bg',
+    1030: 'mist_bg',
+    1063: 'rain_bg',
+    1066: 'snow_bg',
+    1069: 'mist_bg',
+    1072: 'mist_bg',
+    1087: 'cloudy_bg',
+    1114: 'snow_bg',
+    1117: 'snow_bg',
+    1135: 'mist_bg',
+    1147: 'mist_bg',
+    1150: 'rain_bg',
+    1153: 'rain_bg',
+    1168: 'mist_bg',
+    1171: 'mist_bg',
+    1180: 'rain_bg',
+    1183: 'rain_bg',
+    1186: 'rain_bg',
+    1189: 'rain_bg',
+    1192: 'rain_bg',
+    1195: 'rain_bg',
+    1198: 'mist_bg',
+    1201: 'mist_bg',
+    1204: 'mist_bg',
+    1207: 'mist_bg',
+    1210: 'snow_bg',
+    1213: 'snow_bg',
+    1216: 'snow_bg',
+    1219: 'snow_bg',
+    1222: 'snow_bg',
+    1225: 'snow_bg',
+    1237: 'hailstorm_bg',
+    1240: 'rain_bg',
+    1243: 'rain_bg',
+    1246: 'rain_bg',
+    1249: 'mist_bg',
+    1252: 'mist_bg',
+    1255: 'snow_bg',
+    1258: 'snow_bg',
+    1261: 'hailstorm_bg',
+    1264: 'hailstorm_bg',
+    1273: 'rain_bg',
+    1276: 'rain_bg',
+    1279: 'snow_bg',
+    1282: 'snow_bg',
+
+  }
+
+  if(is_day == 1){
+      return day[code]
+  }
+  else{
+    return night[code];
+  }
+}
+
+export {getImg, getAQIImg, getBg}
 
 

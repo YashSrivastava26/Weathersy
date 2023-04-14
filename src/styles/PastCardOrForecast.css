@@ -7,24 +7,44 @@
 }
 
 .smallWeatherImg{
-  margin: auto;
+  margin: 0px auto;
   width: 80%;
-  height: 80%;
+  height: 60%;
+}
+
+.pastDay{
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .pastMsg{
   text-align: center;
-  margin-bottom: 15% !important;
+  margin-bottom: 0;
 }
 
 .futureContainer{
   display: flex;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 
 }
 
+.imgAreaFuture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.futureHeading{
+  padding-top: 3%;
+}
+
+.futureMsg {
+  font-size: small;
+}
 .futureMsgcont{
   display: flex;
   align-items: center;
@@ -34,5 +54,5 @@
 }
 
 .smallWeatherImgFuture{
-  width: 50%;
+  width: 100%;
 }

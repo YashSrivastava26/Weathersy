@@ -4,71 +4,82 @@
   margin: auto;
   padding: 1.5vw;
 }
-.sunny-bg::before{
+.sunny_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/sunny-bg.jpg');
+  background-image: url('../images/background/sunny_bg.jpg');
   background-size: cover;
   opacity: 0.5;
 }
-.rain-bg::before{
+.rain_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/rain-bg.jpg');
+  background-image: url('../images/background/rain_bg.jpg');
   background-size: cover;
   opacity: 0.5;
 }
-.snow-bg::before{
+.snow_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/snow-bg.jpg');
+  background-image: url('../images/background/snow_bg.jpg');
   background-size: cover;
   opacity: 0.5;
   background-size:100% 100%;
 }
-.mist-bg::before{
+.mist_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/mist-bg.jpg');
+  background-image: url('../images/background/mist_bg.jpg');
   background-size: cover;
   opacity: 0.5;
 }
-.clear-night-bg::before{
+.hailstorm_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/clear-night-bg.jpg');
+  background-image: url('../images/background/hailstorm_bg.jpg');
+  background-size: 100% 100%;
+  opacity: 0.5;
+}
+.clear_night_bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/background/clear_night_bg.jpg');
   background-size: cover;
   opacity: 0.5;
   background-size: 100% 100%;
 }
-.cloudy-bg::before{
+.cloudy_bg::before{
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/background/cloudy-bg.jpg');
+  background-image: url('../images/background/cloudy_bg.jpg');
   background-size: cover;
   opacity: 0.5;
   background-size:100% 100%;
@@ -99,4 +110,13 @@
 
 *{
   font-weight: 600;
+}
+
+.errMsg{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  top: 1%;
+  background-color: rgb(253 0 0/0.6) !important;
 }
