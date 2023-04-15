@@ -32,14 +32,14 @@ function App() {
       if (position) {
         let weather_api, astronomy_api, pastData_api;
         if(query === 'currentPos'){
-          weather_api = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&days=3&aqi=yes&alerts=yes`;
-          astronomy_api = `http://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date()}`;
-          pastData_api = `http://api.weatherapi.com/v1/history.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}`;
+          weather_api = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&days=3&aqi=yes&alerts=yes`;
+          astronomy_api = `https://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date()}`;
+          pastData_api = `https://api.weatherapi.com/v1/history.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}`;
         }
         else{
-          weather_api = `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${query}&days=3&aqi=yes&alerts=yes`;
-          astronomy_api = `http://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${query}&dt=${new Date()}`;
-          pastData_api = `http://api.weatherapi.com/v1/history.json?key=${api_key}&q=${query}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}`;
+          weather_api = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${query}&days=3&aqi=yes&alerts=yes`;
+          astronomy_api = `https://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${query}&dt=${new Date()}`;
+          pastData_api = `https://api.weatherapi.com/v1/history.json?key=${api_key}&q=${query}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}`;
 
         }
         
