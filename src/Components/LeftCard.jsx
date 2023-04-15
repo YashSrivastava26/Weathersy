@@ -52,7 +52,7 @@ const LeftCard = (props) => {
                     </div>
                     <div className="imgTextArea">
                         <div className="img">
-                            <img src={getImg(weatherData.current.condition.code, weatherData.current.condition.is_day)} />
+                            <img src={getImg(weatherData.current.condition.code, weatherData.current.is_day)} />
                         </div>
                         <div className="textArea">
                             <div className='weatherCondition'>{weatherData.current.temp_c} &deg;C</div>
