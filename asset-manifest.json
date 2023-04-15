@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Weathersy/static/css/main.40f0b83d.css",
-    "main.js": "/Weathersy/static/js/main.b28b6ea3.js",
+    "main.js": "/Weathersy/static/js/main.cc779078.js",
     "static/media/loading.gif": "/Weathersy/static/media/loading.13e2ea88e02659036971.gif",
     "static/media/cloudy_bg.jpg": "/Weathersy/static/media/cloudy_bg.5e1ce617048924b8c988.jpg",
     "static/media/rain_bg.jpg": "/Weathersy/static/media/rain_bg.e113bbd39eb80a382609.jpg",
@@ -26,10 +26,10 @@
     "static/media/night_half_moon_rain_thunder.png": "/Weathersy/static/media/night_half_moon_rain_thunder.83ddbefcaf2b6f119c52.png",
     "index.html": "/Weathersy/index.html",
     "main.40f0b83d.css.map": "/Weathersy/static/css/main.40f0b83d.css.map",
-    "main.b28b6ea3.js.map": "/Weathersy/static/js/main.b28b6ea3.js.map"
+    "main.cc779078.js.map": "/Weathersy/static/js/main.cc779078.js.map"
   },
   "entrypoints": [
     "static/css/main.40f0b83d.css",
-    "static/js/main.b28b6ea3.js"
+    "static/js/main.cc779078.js"
   ]
 }
