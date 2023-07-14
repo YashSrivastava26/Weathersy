@@ -1,70 +1,142 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Wheathersy](https://yashsrivastava26.github.io/Weathersy/)
 
-## Available Scripts
+Weathersy is a web application displays real-time weather conditions such as temperature, perception etc and 3-day weather forecast for a user's current location or a manually specified location.
+Users can also access the 5-day weather history to track the weather patterns over time.
 
-In the project directory, you can run:
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  git clone https://github.com/YashSrivastava26/Weathersy.git
+```
 
-### `npm test`
+Go to the project directory
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  cd Weathersy
+```
 
-### `npm run build`
+Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  npm run start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Reference
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Get Weather Data by your current position
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```http
+  GET https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&days=3&aqi=yes&alerts=yes
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `position.coords.latitude` | `string` | **Required**. Your current location latitude |
+| `position.coords.longitude` | `string` | **Required**. Your current location longitude |
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Get Weather Data by searching
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```http
+  GET https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${query}&days=3&aqi=yes&alerts=yes
+```
 
-### Code Splitting
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `query` | `string` | **Required**. Query for Search |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Get Astronomical Data by your current position
 
-### Making a Progressive Web App
+```http
+  GET https://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date()}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `position.coords.latitude` | `string` | **Required**. Your current location latitude |
+| `position.coords.longitude` | `string` | **Required**. Your current location longitude |
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Get Astronomical Data by searching
 
-### Deployment
+```http
+  GET https://api.weatherapi.com/v1/astronomy.json?key=${api_key}&q=${query}&dt=${new Date()}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `query` | `string` | **Required**. Query for Search |
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Get Pasr Weather Data by your current position
+
+```http
+  GET https://api.weatherapi.com/v1/history.json?key=${api_key}&q=${position.coords.latitude},${position.coords.longitude}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `position.coords.latitude` | `string` | **Required**. Your current location latitude |
+| `position.coords.longitude` | `string` | **Required**. Your current location longitude |
+
+
+#### Get Past Weather Data by searching
+
+```http
+  GET https://api.weatherapi.com/v1/history.json?key=${api_key}&q=${query}&dt=${new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)}&unixend_dt=${Math.ceil(new Date().getTime() / 1000)}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `query` | `string` | **Required**. Query for Search |
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY` : api key can be claimed at https://www.weatherapi.com/
+
+
+## 🛠 Skills
+Javascript, HTML, CSS, ReactJs, Material UI
+
+
+## Features
+
+- Desktop friendly website.
+- Includes search functionality for finding specific places weather data.
+- Includes functionality for finding weather data by location.
+- Provides the latest news updates on various topics such as uv index, wind speed, sunrise, sunset, humidity, visibility, air quality, past week data and forecast of 3 days.
+# Hi, I'm Yash! 👋
+
+
+## 🚀 About Me
+I'm a full stack (MERN stack) developer, currently in 6 semester at Kalinga Institute of Industrial Technology, Bhubaneswar. for more info you can visit my portfolio
+
+
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yashsrivastava2603/)
+
+
+
